@@ -1,0 +1,721 @@
+<!doctype html>
+<html lang="en" class="scroll-smooth">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Real Estate AI Prompt Pack — 65+ Prompts for Agents</title>
+<meta name="description" content="65+ copy-paste AI prompts for listings, social, scripts, email, CMAs, negotiation, and 15 new research & due-diligence workflows. Built for real agents." />
+<link rel="canonical" href="https://beteshjosh.gumroad.com/l/sbvluk" />
+<meta property="og:title" content="Real Estate AI Prompt Pack — 65+ Prompts for Agents" />
+<meta property="og:description" content="Write a week of marketing in 30 minutes. Research a deal in 5. 65+ AI prompts for agents." />
+<meta property="og:type" content="product" />
+<meta property="og:url" content="https://beteshjosh.gumroad.com/l/sbvluk" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="Real Estate AI Prompt Pack — 65+ Prompts for Agents" />
+<meta name="twitter:description" content="65+ copy-paste AI prompts for listings, social, CMAs, negotiation, and research." />
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+  tailwind.config = {
+    darkMode: 'class',
+    theme: {
+      extend: {
+        fontFamily: {
+          display: ['"Fraunces"','ui-serif','Georgia','serif'],
+          sans:    ['"Inter"','ui-sans-serif','system-ui','sans-serif'],
+          mono:    ['"JetBrains Mono"','ui-monospace','SFMono-Regular','Menlo','monospace'],
+        },
+        colors: {
+          // Warm editorial neutrals + one quiet accent.
+          paper:  { 50:'#faf8f4', 100:'#f4f1ea', 200:'#e8e3d6' },
+          ink:    { 700:'#3d3a33', 800:'#27251f', 900:'#1a1814', 950:'#0e0d0a' },
+          accent: { 500:'#1f6f4a', 600:'#175a3c', 700:'#13492f' }, // deep estate green
+        },
+        letterSpacing: { tightest: '-0.04em' },
+      },
+    },
+  };
+</script>
+<style>
+  @import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=JetBrains+Mono:wght@400;500&display=swap");
+
+  :root { color-scheme: light dark; }
+  html { -webkit-font-smoothing: antialiased; text-rendering: optimizeLegibility; }
+  body { font-feature-settings: "ss01","cv11"; }
+
+  /* Editorial display tweaks */
+  .display { font-family: "Fraunces", ui-serif, Georgia, serif; font-optical-sizing: auto; letter-spacing: -0.025em; }
+  .display-tight { letter-spacing: -0.035em; }
+
+  /* Tracked small-caps eyebrow */
+  .eyebrow {
+    font-family: "Inter", ui-sans-serif, system-ui, sans-serif;
+    font-size: 11px;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    font-weight: 600;
+  }
+
+  /* Hair rules */
+  .rule { height:1px; background: currentColor; opacity:.10; }
+
+  /* Section number marker */
+  .section-num {
+    font-family: "JetBrains Mono", ui-monospace, monospace;
+    font-size: 11px;
+    letter-spacing: .14em;
+    text-transform: uppercase;
+  }
+
+  /* Reveal on scroll — subtle */
+  .reveal { opacity: 0; transform: translateY(10px); transition: opacity .9s cubic-bezier(.2,.7,.2,1), transform .9s cubic-bezier(.2,.7,.2,1); }
+  .reveal.in { opacity: 1; transform: none; }
+  @media (prefers-reduced-motion: reduce) {
+    .reveal { opacity:1; transform:none; transition:none; }
+  }
+
+  /* Dotted background — very subtle */
+  .dots {
+    background-image: radial-gradient(currentColor 1px, transparent 1px);
+    background-size: 22px 22px;
+    color: rgba(26,24,20,.10);
+  }
+  .dark .dots { color: rgba(250,248,244,.07); }
+
+  /* Soft underline accent */
+  .accent-underline {
+    background-image: linear-gradient(transparent 70%, rgba(31,111,74,.22) 70%);
+    background-size: 100% 100%;
+  }
+
+  /* Quiet card */
+  .card {
+    border: 1px solid rgba(26,24,20,.08);
+    background: rgba(255,255,255,.55);
+    backdrop-filter: blur(2px);
+  }
+  .dark .card {
+    border-color: rgba(250,248,244,.08);
+    background: rgba(26,24,20,.40);
+  }
+
+  /* Lined paper for sample prompt */
+  .lined {
+    background-image: linear-gradient(rgba(26,24,20,.06) 1px, transparent 1px);
+    background-size: 100% 28px;
+  }
+  .dark .lined {
+    background-image: linear-gradient(rgba(250,248,244,.08) 1px, transparent 1px);
+  }
+
+  /* Focus ring */
+  :where(a, button, summary, [tabindex]):focus-visible {
+    outline: none;
+    box-shadow: 0 0 0 2px var(--tw-ring-color, #1f6f4a), 0 0 0 5px rgba(31,111,74,.16);
+    border-radius: 6px;
+  }
+
+  /* Subtle marquee for category tags */
+  @keyframes drift { from { transform: translateX(0) } to { transform: translateX(-50%) } }
+  .drift { animation: drift 60s linear infinite; }
+  @media (prefers-reduced-motion: reduce) { .drift { animation: none; } }
+
+  /* Asterism between dots in lists */
+  .asterism::after { content: "·"; margin: 0 .6rem; opacity:.4; }
+  .asterism:last-child::after { content: ""; }
+
+  /* Tag chip */
+  .chip {
+    font-family: "JetBrains Mono", ui-monospace, monospace;
+    font-size: 11px;
+    letter-spacing: .04em;
+    border: 1px solid currentColor;
+    color: rgba(26,24,20,.55);
+    padding: 2px 8px;
+    border-radius: 999px;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+  }
+  .dark .chip { color: rgba(250,248,244,.55); }
+</style>
+</head>
+
+<body class="bg-paper-50 text-ink-900 dark:bg-ink-950 dark:text-paper-50 font-sans antialiased selection:bg-accent-500/20">
+
+<!-- ============================== NAV ============================== -->
+<header class="sticky top-0 z-40 bg-paper-50/85 dark:bg-ink-950/80 backdrop-blur supports-[backdrop-filter]:bg-paper-50/65 dark:supports-[backdrop-filter]:bg-ink-950/65 border-b border-ink-900/5 dark:border-paper-50/10">
+  <nav class="max-w-6xl mx-auto px-6 sm:px-10 h-[68px] flex items-center justify-between" aria-label="Primary">
+    <a href="#top" class="flex items-center gap-2.5 group">
+      <span aria-hidden="true" class="grid place-items-center w-7 h-7 rounded-sm border border-ink-900/15 dark:border-paper-50/20">
+        <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11.5 12 4l9 7.5"/><path d="M5 10v9h14v-9"/></svg>
+      </span>
+      <span class="display text-[15px] font-semibold tracking-tightest">Prompt&nbsp;Pack</span>
+      <span class="section-num text-ink-700/55 dark:text-paper-50/45 hidden sm:inline">№&nbsp;001</span>
+    </a>
+    <div class="hidden md:flex items-center gap-8 text-sm text-ink-700/80 dark:text-paper-50/70">
+      <a href="#inside" class="hover:text-ink-900 dark:hover:text-paper-50 transition-colors">Inside</a>
+      <a href="#sample" class="hover:text-ink-900 dark:hover:text-paper-50 transition-colors">Sample</a>
+      <a href="#how" class="hover:text-ink-900 dark:hover:text-paper-50 transition-colors">How</a>
+      <a href="#faq" class="hover:text-ink-900 dark:hover:text-paper-50 transition-colors">FAQ</a>
+    </div>
+    <div class="flex items-center gap-2">
+      <button id="theme-toggle" type="button" aria-label="Toggle dark mode" class="inline-flex items-center justify-center w-9 h-9 rounded-full border border-ink-900/10 dark:border-paper-50/15 hover:bg-ink-900/5 dark:hover:bg-paper-50/5 transition-colors">
+        <svg class="hidden dark:block" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/></svg>
+        <svg class="block dark:hidden" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3a7 7 0 0 0 9.79 9.79Z"/></svg>
+      </button>
+      <a href="https://beteshjosh.gumroad.com/l/sbvluk" class="hidden sm:inline-flex items-center gap-2 rounded-full bg-ink-900 dark:bg-paper-50 text-paper-50 dark:text-ink-900 text-[13px] font-semibold px-4 h-9 hover:opacity-90 transition-opacity">
+        Get the pack
+      </a>
+    </div>
+  </nav>
+</header>
+
+<!-- ============================== HERO ============================== -->
+<section id="top" class="relative">
+  <div class="absolute inset-0 dots opacity-50 [mask-image:radial-gradient(ellipse_60%_50%_at_50%_40%,black,transparent_85%)]" aria-hidden="true"></div>
+
+  <div class="relative max-w-6xl mx-auto px-6 sm:px-10 pt-20 sm:pt-28 pb-16 sm:pb-24">
+    <!-- Eyebrow line -->
+    <div class="flex items-center gap-3 reveal">
+      <span class="eyebrow text-accent-600 dark:text-accent-500">A field guide for agents</span>
+      <span class="hidden sm:block flex-1 rule"></span>
+      <span class="section-num hidden sm:inline text-ink-700/55 dark:text-paper-50/45">issue 001 · summer 2026</span>
+    </div>
+
+    <!-- Headline -->
+    <h1 class="display display-tight mt-8 text-[44px] sm:text-[68px] lg:text-[88px] font-[600] leading-[0.98] reveal">
+      Write a week of marketing<br/>
+      in <span class="accent-underline">thirty minutes</span>.<br/>
+      <span class="text-ink-700/70 dark:text-paper-50/55 italic font-[500]">Research a deal in five.</span>
+    </h1>
+
+    <div class="mt-10 grid lg:grid-cols-12 gap-10 items-end reveal" style="transition-delay:.05s">
+      <p class="lg:col-span-7 text-lg sm:text-xl leading-[1.55] text-ink-700/90 dark:text-paper-50/75 max-w-2xl">
+        Sixty-five copy-paste AI prompts, written for working agents. Listings, social, scripts, cold outreach, CMAs, negotiation, reviews &mdash; and a new research &amp; due-diligence section that turns a stack of addresses into a stack of decisions.
+      </p>
+      <div class="lg:col-span-5 lg:pl-10 lg:border-l border-ink-900/10 dark:border-paper-50/10">
+        <div class="flex items-baseline gap-3">
+          <span class="display text-5xl font-[600]">$27</span>
+          <span class="text-sm text-ink-700/60 dark:text-paper-50/55">one-time · instant PDF</span>
+        </div>
+        <div class="mt-5 flex flex-wrap gap-3">
+          <a href="https://beteshjosh.gumroad.com/l/sbvluk" class="inline-flex items-center gap-2 rounded-full bg-accent-600 hover:bg-accent-700 text-paper-50 text-sm font-semibold px-5 h-11 transition-colors">
+            I want this
+            <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+          </a>
+          <a href="#sample" class="inline-flex items-center gap-2 rounded-full border border-ink-900/15 dark:border-paper-50/20 text-sm font-semibold px-5 h-11 hover:bg-ink-900/5 dark:hover:bg-paper-50/5 transition-colors">
+            Read a sample
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Bottom meta strip -->
+    <div class="mt-16 sm:mt-24 flex flex-wrap items-center gap-y-3 text-[13px] text-ink-700/70 dark:text-paper-50/55 reveal" style="transition-delay:.1s">
+      <span class="asterism">65+ prompts</span>
+      <span class="asterism">15 pages</span>
+      <span class="asterism">10+ workflows</span>
+      <span class="asterism">ChatGPT &amp; Claude</span>
+      <span class="asterism">Lifetime access</span>
+    </div>
+  </div>
+</section>
+
+<!-- ============================== DIVIDER ============================== -->
+<div class="max-w-6xl mx-auto px-6 sm:px-10"><div class="rule text-ink-900 dark:text-paper-50"></div></div>
+
+<!-- ============================== CATEGORY DRIFT ============================== -->
+<section class="overflow-hidden py-7" aria-hidden="true">
+  <div class="drift flex gap-10 whitespace-nowrap text-[13px] text-ink-700/55 dark:text-paper-50/40 w-max font-mono">
+    <span>Listings — single-family</span><span>·</span>
+    <span>Luxury</span><span>·</span><span>Condo</span><span>·</span><span>Investment</span><span>·</span><span>Fixer</span><span>·</span><span>Land</span><span>·</span>
+    <span>Instagram</span><span>·</span><span>Reels</span><span>·</span><span>LinkedIn</span><span>·</span><span>Facebook</span><span>·</span>
+    <span>Buyer scripts</span><span>·</span><span>Seller scripts</span><span>·</span><span>Expired / FSBO</span><span>·</span><span>SOI check-in</span><span>·</span>
+    <span>CMA narratives</span><span>·</span><span>Neighborhood reports</span><span>·</span><span>Open house</span><span>·</span><span>Follow-up</span><span>·</span>
+    <span>Multiple offers</span><span>·</span><span>Counter framing</span><span>·</span><span>Inspection objections</span><span>·</span>
+    <span>Review requests</span><span>·</span><span>Anniversary touches</span><span>·</span>
+    <span>Property history</span><span>·</span><span>Comp briefs</span><span>·</span><span>School intel</span><span>·</span>
+    <span>Zoning &amp; land-use</span><span>·</span><span>HOA boards</span><span>·</span><span>Tax assessments</span><span>·</span>
+    <span>Builder background</span><span>·</span><span>Market forecasts</span><span>·</span>
+    <!-- duplicate for seamless loop -->
+    <span>Listings — single-family</span><span>·</span>
+    <span>Luxury</span><span>·</span><span>Condo</span><span>·</span><span>Investment</span><span>·</span><span>Fixer</span><span>·</span><span>Land</span><span>·</span>
+    <span>Instagram</span><span>·</span><span>Reels</span><span>·</span><span>LinkedIn</span><span>·</span><span>Facebook</span><span>·</span>
+    <span>Buyer scripts</span><span>·</span><span>Seller scripts</span><span>·</span><span>Expired / FSBO</span><span>·</span><span>SOI check-in</span><span>·</span>
+    <span>CMA narratives</span><span>·</span><span>Neighborhood reports</span><span>·</span><span>Open house</span><span>·</span><span>Follow-up</span><span>·</span>
+    <span>Multiple offers</span><span>·</span><span>Counter framing</span><span>·</span><span>Inspection objections</span><span>·</span>
+    <span>Review requests</span><span>·</span><span>Anniversary touches</span><span>·</span>
+    <span>Property history</span><span>·</span><span>Comp briefs</span><span>·</span><span>School intel</span><span>·</span>
+    <span>Zoning &amp; land-use</span><span>·</span><span>HOA boards</span><span>·</span><span>Tax assessments</span><span>·</span>
+    <span>Builder background</span><span>·</span><span>Market forecasts</span><span>·</span>
+  </div>
+</section>
+
+<div class="max-w-6xl mx-auto px-6 sm:px-10"><div class="rule text-ink-900 dark:text-paper-50"></div></div>
+
+<!-- ============================== STATS ============================== -->
+<section class="max-w-6xl mx-auto px-6 sm:px-10 py-20 sm:py-28">
+  <div class="flex items-center gap-3 reveal mb-12">
+    <span class="section-num text-ink-700/55 dark:text-paper-50/45">№ 02 / by the numbers</span>
+    <span class="flex-1 rule"></span>
+  </div>
+  <div class="grid grid-cols-2 md:grid-cols-4 gap-10">
+    <div class="reveal">
+      <div class="display text-6xl sm:text-7xl font-[600] leading-none">65<span class="text-accent-600">+</span></div>
+      <div class="mt-3 text-sm text-ink-700/70 dark:text-paper-50/55">engineered prompts</div>
+    </div>
+    <div class="reveal" style="transition-delay:.05s">
+      <div class="display text-6xl sm:text-7xl font-[600] leading-none">15</div>
+      <div class="mt-3 text-sm text-ink-700/70 dark:text-paper-50/55">organized pages</div>
+    </div>
+    <div class="reveal" style="transition-delay:.10s">
+      <div class="display text-6xl sm:text-7xl font-[600] leading-none">10<span class="text-accent-600">+</span></div>
+      <div class="mt-3 text-sm text-ink-700/70 dark:text-paper-50/55">categories, listing to close</div>
+    </div>
+    <div class="reveal" style="transition-delay:.15s">
+      <div class="display text-6xl sm:text-7xl font-[600] leading-none">≈2<span class="text-2xl text-ink-700/55 dark:text-paper-50/45 font-sans align-baseline">min</span></div>
+      <div class="mt-3 text-sm text-ink-700/70 dark:text-paper-50/55">to a usable first draft</div>
+    </div>
+  </div>
+</section>
+
+<div class="max-w-6xl mx-auto px-6 sm:px-10"><div class="rule text-ink-900 dark:text-paper-50"></div></div>
+
+<!-- ============================== WHAT'S INSIDE ============================== -->
+<section id="inside" class="max-w-6xl mx-auto px-6 sm:px-10 py-20 sm:py-28">
+  <div class="flex items-center gap-3 reveal mb-12">
+    <span class="section-num text-ink-700/55 dark:text-paper-50/45">№ 03 / what's inside</span>
+    <span class="flex-1 rule"></span>
+  </div>
+
+  <div class="grid lg:grid-cols-12 gap-12 items-start">
+    <div class="lg:col-span-5 reveal">
+      <h2 class="display display-tight text-4xl sm:text-5xl font-[600] leading-[1.05]">Organized like your week, not like a&nbsp;textbook.</h2>
+      <p class="mt-5 text-ink-700/80 dark:text-paper-50/65 leading-relaxed max-w-md">Open the section that matches what you have to ship. Copy the prompt. Fill the brackets. Send the result.</p>
+    </div>
+
+    <ul class="lg:col-span-7 divide-y divide-ink-900/10 dark:divide-paper-50/10 border-y border-ink-900/10 dark:border-paper-50/10">
+      <!-- row -->
+      <li class="grid grid-cols-[40px_1fr_auto] items-baseline gap-x-6 py-5 reveal">
+        <span class="section-num text-ink-700/55 dark:text-paper-50/45">01</span>
+        <div>
+          <div class="display text-xl font-[600]">Listing descriptions</div>
+          <p class="mt-1 text-sm text-ink-700/70 dark:text-paper-50/60">Six angles: single-family, luxury, condo, investment, fixer, land.</p>
+        </div>
+        <span class="chip">06 prompts</span>
+      </li>
+      <li class="grid grid-cols-[40px_1fr_auto] items-baseline gap-x-6 py-5 reveal">
+        <span class="section-num text-ink-700/55 dark:text-paper-50/45">02</span>
+        <div>
+          <div class="display text-xl font-[600]">Social — IG, FB, LinkedIn, Reels</div>
+          <p class="mt-1 text-sm text-ink-700/70 dark:text-paper-50/60">Captions and scripts written for agents, not influencers.</p>
+        </div>
+        <span class="chip">10 prompts</span>
+      </li>
+      <li class="grid grid-cols-[40px_1fr_auto] items-baseline gap-x-6 py-5 reveal">
+        <span class="section-num text-ink-700/55 dark:text-paper-50/45">03</span>
+        <div>
+          <div class="display text-xl font-[600]">Buyer &amp; seller scripts</div>
+          <p class="mt-1 text-sm text-ink-700/70 dark:text-paper-50/60">First-call, qualifying, objections, listing presentation.</p>
+        </div>
+        <span class="chip">08 prompts</span>
+      </li>
+      <li class="grid grid-cols-[40px_1fr_auto] items-baseline gap-x-6 py-5 reveal">
+        <span class="section-num text-ink-700/55 dark:text-paper-50/45">04</span>
+        <div>
+          <div class="display text-xl font-[600]">Cold outreach</div>
+          <p class="mt-1 text-sm text-ink-700/70 dark:text-paper-50/60">Expired, FSBO, SOI check-ins, door-knocking — short and human.</p>
+        </div>
+        <span class="chip">07 prompts</span>
+      </li>
+      <li class="grid grid-cols-[40px_1fr_auto] items-baseline gap-x-6 py-5 reveal">
+        <span class="section-num text-ink-700/55 dark:text-paper-50/45">05</span>
+        <div>
+          <div class="display text-xl font-[600]">Email marketing</div>
+          <p class="mt-1 text-sm text-ink-700/70 dark:text-paper-50/60">Monthly updates, drip sequences, neighborhood reports.</p>
+        </div>
+        <span class="chip">07 prompts</span>
+      </li>
+      <li class="grid grid-cols-[40px_1fr_auto] items-baseline gap-x-6 py-5 reveal">
+        <span class="section-num text-ink-700/55 dark:text-paper-50/45">06</span>
+        <div>
+          <div class="display text-xl font-[600]">CMAs &amp; neighborhood reports</div>
+          <p class="mt-1 text-sm text-ink-700/70 dark:text-paper-50/60">Translate raw comps into a story your seller will actually read.</p>
+        </div>
+        <span class="chip">05 prompts</span>
+      </li>
+      <li class="grid grid-cols-[40px_1fr_auto] items-baseline gap-x-6 py-5 reveal">
+        <span class="section-num text-ink-700/55 dark:text-paper-50/45">07</span>
+        <div>
+          <div class="display text-xl font-[600]">Open house &amp; follow-up</div>
+          <p class="mt-1 text-sm text-ink-700/70 dark:text-paper-50/60">Promo, sign-in script, same-day note, 48-hour nudge.</p>
+        </div>
+        <span class="chip">04 prompts</span>
+      </li>
+      <li class="grid grid-cols-[40px_1fr_auto] items-baseline gap-x-6 py-5 reveal">
+        <span class="section-num text-ink-700/55 dark:text-paper-50/45">08</span>
+        <div>
+          <div class="display text-xl font-[600]">Negotiation</div>
+          <p class="mt-1 text-sm text-ink-700/70 dark:text-paper-50/60">Multiple offers, counter framing, inspection objections.</p>
+        </div>
+        <span class="chip">05 prompts</span>
+      </li>
+      <li class="grid grid-cols-[40px_1fr_auto] items-baseline gap-x-6 py-5 reveal">
+        <span class="section-num text-ink-700/55 dark:text-paper-50/45">09</span>
+        <div>
+          <div class="display text-xl font-[600]">Reviews &amp; relationship</div>
+          <p class="mt-1 text-sm text-ink-700/70 dark:text-paper-50/60">Request templates, public responses, 1-year touches.</p>
+        </div>
+        <span class="chip">03 prompts</span>
+      </li>
+      <li class="grid grid-cols-[40px_1fr_auto] items-baseline gap-x-6 py-5 reveal">
+        <span class="section-num text-accent-600">10</span>
+        <div>
+          <div class="flex items-center gap-2 flex-wrap">
+            <span class="display text-xl font-[600]">Research &amp; due diligence</span>
+            <span class="eyebrow rounded-full px-2 py-[3px] bg-accent-500/10 text-accent-600">New · 15</span>
+          </div>
+          <p class="mt-1 text-sm text-ink-700/70 dark:text-paper-50/60">Property history, comp briefs, school intel, zoning, HOA boards, tax assessments, market forecasts.</p>
+        </div>
+        <span class="chip border-accent-600 text-accent-600">15 prompts</span>
+      </li>
+    </ul>
+  </div>
+</section>
+
+<div class="max-w-6xl mx-auto px-6 sm:px-10"><div class="rule text-ink-900 dark:text-paper-50"></div></div>
+
+<!-- ============================== SAMPLE PROMPT ============================== -->
+<section id="sample" class="max-w-6xl mx-auto px-6 sm:px-10 py-20 sm:py-28">
+  <div class="flex items-center gap-3 reveal mb-12">
+    <span class="section-num text-ink-700/55 dark:text-paper-50/45">№ 04 / specimen</span>
+    <span class="flex-1 rule"></span>
+  </div>
+
+  <div class="grid lg:grid-cols-12 gap-12 items-start">
+    <div class="lg:col-span-4 reveal">
+      <h2 class="display display-tight text-4xl sm:text-5xl font-[600] leading-[1.05]">A real prompt.<br/><span class="italic text-ink-700/70 dark:text-paper-50/55">No fluff.</span></h2>
+      <p class="mt-5 text-ink-700/80 dark:text-paper-50/65 leading-relaxed">Every prompt is engineered with role, context, constraints, format, and tone — so the first draft is one you'd actually send.</p>
+
+      <dl class="mt-8 space-y-4 text-sm">
+        <div class="flex gap-4">
+          <dt class="section-num text-ink-700/55 dark:text-paper-50/45 shrink-0 w-12">role</dt>
+          <dd>Senior real-estate due-diligence analyst.</dd>
+        </div>
+        <div class="flex gap-4">
+          <dt class="section-num text-ink-700/55 dark:text-paper-50/45 shrink-0 w-12">format</dt>
+          <dd>One-page brief with bold callouts.</dd>
+        </div>
+        <div class="flex gap-4">
+          <dt class="section-num text-ink-700/55 dark:text-paper-50/45 shrink-0 w-12">tone</dt>
+          <dd>Plain-English advisor, not promotional.</dd>
+        </div>
+        <div class="flex gap-4">
+          <dt class="section-num text-ink-700/55 dark:text-paper-50/45 shrink-0 w-12">draft</dt>
+          <dd>~90 seconds in ChatGPT or Claude.</dd>
+        </div>
+      </dl>
+    </div>
+
+    <div class="lg:col-span-8 reveal" style="transition-delay:.05s">
+      <figure class="card rounded-md overflow-hidden">
+        <figcaption class="flex items-center justify-between px-5 py-3 border-b border-ink-900/10 dark:border-paper-50/10 text-[11px]">
+          <div class="flex items-center gap-3 font-mono text-ink-700/70 dark:text-paper-50/55">
+            <span class="eyebrow text-accent-600">Research</span>
+            <span>property-history-deep-dive.prompt</span>
+          </div>
+          <button id="copy-btn" type="button" class="inline-flex items-center gap-1.5 rounded-full border border-ink-900/15 dark:border-paper-50/20 px-2.5 py-[3px] text-ink-700/70 dark:text-paper-50/65 hover:bg-ink-900/5 dark:hover:bg-paper-50/5 transition-colors">
+            <svg viewBox="0 0 24 24" width="12" height="12" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15V5a2 2 0 0 1 2-2h10"/></svg>
+            <span id="copy-label">Copy</span>
+          </button>
+        </figcaption>
+        <pre id="sample-prompt" class="lined px-6 py-5 text-[14px] leading-[28px] font-mono whitespace-pre-wrap text-ink-900 dark:text-paper-50 max-h-[480px] overflow-auto">You are a senior real-estate due-diligence analyst.
+
+Pull together a property history deep dive for [ADDRESS] that I can hand to a serious buyer.
+
+Cover, in this order:
+  1. Ownership chronology — years owned, sale prices, % changes vs. local trend.
+  2. Permitted work and inspections — additions, roof, electrical, plumbing.
+     Call out missing permits.
+  3. Tax-assessment history and any abatements or appeals.
+  4. Insurance signals — claims history if public, flood/wind zone notes.
+  5. Liens, encumbrances, easements that affect use.
+  6. Neighborhood context — 12-month comp band, days-on-market trend,
+     school catchment.
+
+Format as a one-page brief with bold callouts for anything that would
+change the offer price. End with three buyer questions I should ask the
+seller before drafting an offer.
+
+Tone: clear, plain-English advisor — not promotional.</pre>
+      </figure>
+      <p class="mt-3 text-xs text-ink-700/55 dark:text-paper-50/45">1 of 65+. Each prompt is similarly engineered.</p>
+    </div>
+  </div>
+</section>
+
+<div class="max-w-6xl mx-auto px-6 sm:px-10"><div class="rule text-ink-900 dark:text-paper-50"></div></div>
+
+<!-- ============================== HOW ============================== -->
+<section id="how" class="max-w-6xl mx-auto px-6 sm:px-10 py-20 sm:py-28">
+  <div class="flex items-center gap-3 reveal mb-12">
+    <span class="section-num text-ink-700/55 dark:text-paper-50/45">№ 05 / how it works</span>
+    <span class="flex-1 rule"></span>
+  </div>
+
+  <div class="grid lg:grid-cols-12 gap-12 items-start">
+    <div class="lg:col-span-4 reveal">
+      <h2 class="display display-tight text-4xl sm:text-5xl font-[600] leading-[1.05]">Three steps.<br/>Then your week looks different.</h2>
+    </div>
+    <ol class="lg:col-span-8 grid sm:grid-cols-3 gap-px bg-ink-900/10 dark:bg-paper-50/10 border border-ink-900/10 dark:border-paper-50/10 rounded-md overflow-hidden">
+      <li class="bg-paper-50 dark:bg-ink-950 p-8 reveal">
+        <span class="section-num text-accent-600">Step 01</span>
+        <h3 class="display text-2xl font-[600] mt-3">Download the PDF.</h3>
+        <p class="mt-3 text-sm text-ink-700/70 dark:text-paper-50/60 leading-relaxed">Instant after checkout. 15 pages, clickable table of contents.</p>
+      </li>
+      <li class="bg-paper-50 dark:bg-ink-950 p-8 reveal" style="transition-delay:.05s">
+        <span class="section-num text-accent-600">Step 02</span>
+        <h3 class="display text-2xl font-[600] mt-3">Pick a prompt. Swap brackets.</h3>
+        <p class="mt-3 text-sm text-ink-700/70 dark:text-paper-50/60 leading-relaxed">Open the section that matches what you need to ship.</p>
+      </li>
+      <li class="bg-paper-50 dark:bg-ink-950 p-8 reveal" style="transition-delay:.10s">
+        <span class="section-num text-accent-600">Step 03</span>
+        <h3 class="display text-2xl font-[600] mt-3">Paste &amp; send.</h3>
+        <p class="mt-3 text-sm text-ink-700/70 dark:text-paper-50/60 leading-relaxed">First usable draft in under two minutes — into ChatGPT or Claude.</p>
+      </li>
+    </ol>
+  </div>
+</section>
+
+<div class="max-w-6xl mx-auto px-6 sm:px-10"><div class="rule text-ink-900 dark:text-paper-50"></div></div>
+
+<!-- ============================== WHO ============================== -->
+<section class="max-w-6xl mx-auto px-6 sm:px-10 py-20 sm:py-28">
+  <div class="flex items-center gap-3 reveal mb-12">
+    <span class="section-num text-ink-700/55 dark:text-paper-50/45">№ 06 / who it's for</span>
+    <span class="flex-1 rule"></span>
+  </div>
+
+  <div class="grid lg:grid-cols-12 gap-12 items-start">
+    <h2 class="lg:col-span-5 display display-tight text-4xl sm:text-5xl font-[600] leading-[1.05] reveal">For agents who'd rather close deals than stare at a blank screen.</h2>
+    <dl class="lg:col-span-7 grid sm:grid-cols-2 gap-x-10 gap-y-8 reveal" style="transition-delay:.05s">
+      <div>
+        <dt class="display text-xl font-[600]">Solo agents</dt>
+        <dd class="mt-2 text-sm text-ink-700/75 dark:text-paper-50/60 leading-relaxed">No marketing team. You're it. Cut the busywork.</dd>
+      </div>
+      <div>
+        <dt class="display text-xl font-[600]">Small teams</dt>
+        <dd class="mt-2 text-sm text-ink-700/75 dark:text-paper-50/60 leading-relaxed">Standardize voice across the team. One playbook, everyone on-brand.</dd>
+      </div>
+      <div>
+        <dt class="display text-xl font-[600]">New agents</dt>
+        <dd class="mt-2 text-sm text-ink-700/75 dark:text-paper-50/60 leading-relaxed">Skip the year of trial-and-error on what to say.</dd>
+      </div>
+      <div>
+        <dt class="display text-xl font-[600]">Investor-focused</dt>
+        <dd class="mt-2 text-sm text-ink-700/75 dark:text-paper-50/60 leading-relaxed">The new research section pays for itself on deal one.</dd>
+      </div>
+    </dl>
+  </div>
+</section>
+
+<div class="max-w-6xl mx-auto px-6 sm:px-10"><div class="rule text-ink-900 dark:text-paper-50"></div></div>
+
+<!-- ============================== BUY (primary CTA) ============================== -->
+<section id="buy" class="max-w-6xl mx-auto px-6 sm:px-10 py-20 sm:py-28">
+  <div class="flex items-center gap-3 reveal mb-12">
+    <span class="section-num text-ink-700/55 dark:text-paper-50/45">№ 07 / get it</span>
+    <span class="flex-1 rule"></span>
+  </div>
+
+  <div class="grid lg:grid-cols-12 gap-12 items-end">
+    <div class="lg:col-span-7 reveal">
+      <h2 class="display display-tight text-5xl sm:text-6xl lg:text-7xl font-[600] leading-[1.02]">
+        Real Estate AI Prompt Pack
+      </h2>
+      <p class="mt-6 max-w-xl text-lg text-ink-700/80 dark:text-paper-50/65 leading-[1.55]">
+        If even one prompt saves you an hour this week, the pack paid for itself. The other sixty-four are free upside.
+      </p>
+      <ul class="mt-8 grid sm:grid-cols-2 gap-y-3 gap-x-8 text-sm text-ink-700/80 dark:text-paper-50/65">
+        <li class="flex gap-3"><span class="text-accent-600">—</span> 65+ engineered prompts</li>
+        <li class="flex gap-3"><span class="text-accent-600">—</span> 15 new research workflows</li>
+        <li class="flex gap-3"><span class="text-accent-600">—</span> Instant PDF download</li>
+        <li class="flex gap-3"><span class="text-accent-600">—</span> Works with ChatGPT &amp; Claude</li>
+        <li class="flex gap-3"><span class="text-accent-600">—</span> Lifetime updates</li>
+        <li class="flex gap-3"><span class="text-accent-600">—</span> One-time price</li>
+      </ul>
+    </div>
+
+    <div class="lg:col-span-5 reveal" style="transition-delay:.05s">
+      <div class="card rounded-md p-8">
+        <div class="flex items-start justify-between gap-4">
+          <div>
+            <div class="eyebrow text-ink-700/55 dark:text-paper-50/45">Today</div>
+            <div class="mt-2 flex items-baseline gap-2">
+              <span class="display text-6xl font-[600] leading-none">$27</span>
+              <span class="text-sm text-ink-700/60 dark:text-paper-50/50">USD · one-time</span>
+            </div>
+          </div>
+          <span class="chip">PDF · 15 pp</span>
+        </div>
+        <div class="my-7 rule text-ink-900 dark:text-paper-50"></div>
+        <a
+          href="https://beteshjosh.gumroad.com/l/sbvluk"
+          class="w-full inline-flex items-center justify-center gap-2 rounded-full bg-accent-600 hover:bg-accent-700 text-paper-50 text-sm font-semibold h-12 transition-colors">
+          I want this
+          <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+        </a>
+        <p class="mt-3 text-center text-[11px] text-ink-700/55 dark:text-paper-50/45">Secure checkout via Gumroad · Instant download</p>
+        <div class="mt-7 grid grid-cols-3 text-center divide-x divide-ink-900/10 dark:divide-paper-50/10">
+          <div class="px-2"><div class="display font-[600] text-xl">65+</div><div class="eyebrow text-ink-700/55 dark:text-paper-50/45 mt-1">prompts</div></div>
+          <div class="px-2"><div class="display font-[600] text-xl">10+</div><div class="eyebrow text-ink-700/55 dark:text-paper-50/45 mt-1">categories</div></div>
+          <div class="px-2"><div class="display font-[600] text-xl">≈2 min</div><div class="eyebrow text-ink-700/55 dark:text-paper-50/45 mt-1">first draft</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="max-w-6xl mx-auto px-6 sm:px-10"><div class="rule text-ink-900 dark:text-paper-50"></div></div>
+
+<!-- ============================== FAQ ============================== -->
+<section id="faq" class="max-w-4xl mx-auto px-6 sm:px-10 py-20 sm:py-28">
+  <div class="flex items-center gap-3 reveal mb-12">
+    <span class="section-num text-ink-700/55 dark:text-paper-50/45">№ 08 / questions</span>
+    <span class="flex-1 rule"></span>
+  </div>
+  <h2 class="display display-tight text-4xl sm:text-5xl font-[600] leading-[1.05] reveal">Frequently<br/>asked.</h2>
+
+  <div class="mt-12 divide-y divide-ink-900/10 dark:divide-paper-50/10 border-y border-ink-900/10 dark:border-paper-50/10">
+    <details class="group py-6 reveal">
+      <summary class="flex items-center justify-between cursor-pointer list-none gap-6">
+        <span class="display text-xl font-[600]">What exactly do I get?</span>
+        <span class="grid place-items-center w-8 h-8 rounded-full border border-ink-900/15 dark:border-paper-50/20 transition group-open:rotate-45 shrink-0">
+          <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14M5 12h14"/></svg>
+        </span>
+      </summary>
+      <p class="mt-4 pr-12 text-ink-700/80 dark:text-paper-50/65 leading-[1.7]">One PDF, 15 pages, 65+ copy-paste prompts organized by workflow — listings, social, scripts, cold outreach, email, CMAs, open house, negotiation, reviews, and a new 15-prompt research &amp; due-diligence section.</p>
+    </details>
+    <details class="group py-6 reveal">
+      <summary class="flex items-center justify-between cursor-pointer list-none gap-6">
+        <span class="display text-xl font-[600]">Do I need ChatGPT Plus or Claude Pro?</span>
+        <span class="grid place-items-center w-8 h-8 rounded-full border border-ink-900/15 dark:border-paper-50/20 transition group-open:rotate-45 shrink-0">
+          <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14M5 12h14"/></svg>
+        </span>
+      </summary>
+      <p class="mt-4 pr-12 text-ink-700/80 dark:text-paper-50/65 leading-[1.7]">No. The prompts work on free tiers. Paid tiers will get you faster and slightly better drafts on long research prompts — but it isn't required.</p>
+    </details>
+    <details class="group py-6 reveal">
+      <summary class="flex items-center justify-between cursor-pointer list-none gap-6">
+        <span class="display text-xl font-[600]">Will I get future updates?</span>
+        <span class="grid place-items-center w-8 h-8 rounded-full border border-ink-900/15 dark:border-paper-50/20 transition group-open:rotate-45 shrink-0">
+          <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14M5 12h14"/></svg>
+        </span>
+      </summary>
+      <p class="mt-4 pr-12 text-ink-700/80 dark:text-paper-50/65 leading-[1.7]">Yes — your Gumroad library updates automatically. The pack has already grown from the original set to include 15 new research workflows.</p>
+    </details>
+    <details class="group py-6 reveal">
+      <summary class="flex items-center justify-between cursor-pointer list-none gap-6">
+        <span class="display text-xl font-[600]">Is this for new or experienced agents?</span>
+        <span class="grid place-items-center w-8 h-8 rounded-full border border-ink-900/15 dark:border-paper-50/20 transition group-open:rotate-45 shrink-0">
+          <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14M5 12h14"/></svg>
+        </span>
+      </summary>
+      <p class="mt-4 pr-12 text-ink-700/80 dark:text-paper-50/65 leading-[1.7]">Both. New agents get a shortcut to "what should I write?" Experienced agents get back the hours currently spent on listing descriptions, market updates, and follow-up.</p>
+    </details>
+    <details class="group py-6 reveal">
+      <summary class="flex items-center justify-between cursor-pointer list-none gap-6">
+        <span class="display text-xl font-[600]">Refunds?</span>
+        <span class="grid place-items-center w-8 h-8 rounded-full border border-ink-900/15 dark:border-paper-50/20 transition group-open:rotate-45 shrink-0">
+          <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14M5 12h14"/></svg>
+        </span>
+      </summary>
+      <p class="mt-4 pr-12 text-ink-700/80 dark:text-paper-50/65 leading-[1.7]">If the pack doesn't save you time in your first week, reply to the receipt email and you'll get your money back. No interrogation.</p>
+    </details>
+  </div>
+
+  <div class="mt-16 text-center reveal">
+    <a href="https://beteshjosh.gumroad.com/l/sbvluk" class="inline-flex items-center gap-2 rounded-full bg-accent-600 hover:bg-accent-700 text-paper-50 text-sm font-semibold px-6 h-12 transition-colors">
+      Get the pack — <span>$27</span>
+      <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+    </a>
+  </div>
+</section>
+
+<!-- ============================== FOOTER ============================== -->
+<footer class="border-t border-ink-900/10 dark:border-paper-50/10">
+  <div class="max-w-6xl mx-auto px-6 sm:px-10 py-10 flex flex-col sm:flex-row items-center justify-between gap-4 text-[13px] text-ink-700/65 dark:text-paper-50/50">
+    <div class="flex items-center gap-2.5">
+      <span aria-hidden="true" class="grid place-items-center w-6 h-6 rounded-sm border border-ink-900/15 dark:border-paper-50/20">
+        <svg viewBox="0 0 24 24" width="12" height="12" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11.5 12 4l9 7.5"/><path d="M5 10v9h14v-9"/></svg>
+      </span>
+      <span class="display font-[600]">Real Estate AI Prompt Pack</span>
+    </div>
+    <div class="flex items-center gap-5">
+      <a href="#inside" class="hover:text-ink-900 dark:hover:text-paper-50">Inside</a>
+      <a href="#sample" class="hover:text-ink-900 dark:hover:text-paper-50">Sample</a>
+      <a href="#faq" class="hover:text-ink-900 dark:hover:text-paper-50">FAQ</a>
+      <a href="#buy" class="hover:text-ink-900 dark:hover:text-paper-50">Buy</a>
+    </div>
+  </div>
+</footer>
+
+<!-- ============================== SCRIPTS ============================== -->
+<script>
+  // Dark mode — system preference, in-memory toggle
+  (function () {
+    var root = document.documentElement;
+    var mq = window.matchMedia ? window.matchMedia('(prefers-color-scheme: dark)') : null;
+    if (mq && mq.matches) root.classList.add('dark');
+    var btn = document.getElementById('theme-toggle');
+    if (btn) btn.addEventListener('click', function () { root.classList.toggle('dark'); });
+    if (mq && mq.addEventListener) mq.addEventListener('change', function (e) {
+      root.classList.toggle('dark', e.matches);
+    });
+  })();
+
+  // Reveal on scroll
+  (function () {
+    var els = document.querySelectorAll('.reveal');
+    if (!('IntersectionObserver' in window)) {
+      els.forEach(function (el) { el.classList.add('in'); });
+      return;
+    }
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (e) {
+        if (e.isIntersecting) {
+          e.target.classList.add('in');
+          io.unobserve(e.target);
+        }
+      });
+    }, { rootMargin: '0px 0px -6% 0px', threshold: 0.05 });
+    els.forEach(function (el) { io.observe(el); });
+  })();
+
+  // Copy sample prompt
+  (function () {
+    var btn = document.getElementById('copy-btn');
+    var label = document.getElementById('copy-label');
+    var pre = document.getElementById('sample-prompt');
+    if (!btn || !pre) return;
+    btn.addEventListener('click', function () {
+      var text = pre.innerText;
+      var done = function () { label.textContent = 'Copied'; setTimeout(function () { label.textContent = 'Copy'; }, 1500); };
+      if (navigator.clipboard && navigator.clipboard.writeText) {
+        navigator.clipboard.writeText(text).then(done).catch(function () {
+          var ta = document.createElement('textarea');
+          ta.value = text; document.body.appendChild(ta); ta.select();
+          try { document.execCommand('copy'); } catch (e) {}
+          document.body.removeChild(ta); done();
+        });
+      } else {
+        var ta = document.createElement('textarea');
+        ta.value = text; document.body.appendChild(ta); ta.select();
+        try { document.execCommand('copy'); } catch (e) {}
+        document.body.removeChild(ta); done();
+      }
+    });
+  })();
+</script>
+</body>
+</html>
