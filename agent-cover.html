@@ -1,0 +1,135 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<title>Agent Field Guide — Cover</title>
+<style>
+  @import url("https://fonts.googleapis.com/css2?family=Inter:wght@500;600;700&family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=JetBrains+Mono:wght@500;600&display=swap");
+
+  html, body { margin: 0; padding: 0; background: #faf8f4; }
+  body { width: 1280px; height: 1280px; overflow: hidden; position: relative; }
+
+  .cover {
+    position: relative;
+    width: 1280px;
+    height: 1280px;
+    background:
+      radial-gradient(ellipse 70% 55% at 50% 42%, rgba(26,24,20,.08), transparent 80%) center / cover no-repeat,
+      #faf8f4;
+    font-family: 'Inter', system-ui, sans-serif;
+    color: #1a1814;
+  }
+
+  .dots {
+    position: absolute; inset: 0;
+    background-image: radial-gradient(rgba(26,24,20,.18) 1.4px, transparent 1.4px);
+    background-size: 26px 26px;
+    -webkit-mask-image: radial-gradient(ellipse 65% 55% at 50% 45%, black, transparent 88%);
+            mask-image: radial-gradient(ellipse 65% 55% at 50% 45%, black, transparent 88%);
+  }
+
+  .rule {
+    position: absolute; left: 80px; right: 80px;
+    height: 1px; background: rgba(26,24,20,.12);
+  }
+  .rule-top { top: 120px; }
+  .rule-bottom { bottom: 160px; }
+
+  .eyebrow {
+    position: absolute; top: 90px; left: 80px;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 20px; letter-spacing: .22em;
+    color: #166534; font-weight: 600;
+  }
+  .issue {
+    position: absolute; top: 90px; right: 80px;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 20px; letter-spacing: .22em;
+    color: rgba(26,24,20,.55); font-weight: 600;
+  }
+
+  .hero {
+    position: absolute; left: 80px; right: 80px;
+    top: 290px;
+  }
+  .hero .line1 {
+    font-family: 'Fraunces', Georgia, serif;
+    font-weight: 600; font-size: 140px; line-height: 1.0;
+    letter-spacing: -0.03em; color: #1a1814;
+    margin: 0;
+  }
+  .hero .line2 {
+    font-family: 'Fraunces', Georgia, serif;
+    font-weight: 700; font-size: 230px; line-height: 1.0;
+    letter-spacing: -0.045em; color: #1a1814;
+    margin: 24px 0 0; display: inline-block;
+    background-image: linear-gradient(transparent 70%, rgba(22,101,52,.28) 70%);
+    background-size: 100% 100%;
+  }
+  .hero .sub {
+    font-family: 'Fraunces', Georgia, serif;
+    font-weight: 500; font-style: italic;
+    font-size: 50px; line-height: 1.18; color: #3a3833;
+    margin: 60px 0 0;
+    max-width: 980px;
+  }
+
+  .vertical-mark {
+    position: absolute;
+    left: 36px; top: 720px;
+    transform: rotate(-90deg); transform-origin: left top;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 14px; letter-spacing: .42em;
+    color: rgba(26,24,20,.40); font-weight: 600;
+    white-space: nowrap;
+  }
+
+  .bottom {
+    position: absolute; left: 80px; right: 80px; bottom: 80px;
+    display: flex; align-items: center; justify-content: space-between;
+  }
+  .bottom .mark { width: 56px; height: 56px; border-radius: 10px;
+    background: rgba(22,101,52,.10); display: grid; place-items: center; }
+  .bottom .stats {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 24px; letter-spacing: .32em;
+    color: #1a1814; font-weight: 600;
+  }
+  .bottom .price {
+    font-family: 'Fraunces', Georgia, serif;
+    font-weight: 700; font-size: 56px; color: #166534;
+    line-height: 1;
+  }
+</style>
+</head>
+<body>
+<div class="cover">
+  <div class="dots"></div>
+
+  <div class="rule rule-top"></div>
+  <div class="eyebrow">MANUAL №&nbsp;001 · A FIELD GUIDE FOR AGENTS</div>
+  <div class="issue">ISSUE 001 · SUMMER 2026</div>
+
+  <div class="vertical-mark">JOSHUA BETESH · BUILT RIGHT TOOLS</div>
+
+  <div class="hero">
+    <div class="line1">The Agent's</div>
+    <div class="line2">Field Guide.</div>
+    <div class="sub">Sixty-five copy-paste AI prompts<br/>for working real estate agents.</div>
+  </div>
+
+  <div class="rule rule-bottom"></div>
+  <div class="bottom">
+    <div class="mark" aria-hidden="true">
+      <svg viewBox="0 0 24 24" width="30" height="30" fill="none" stroke="#166534" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M3 11.5 12 4l9 7.5"/>
+        <path d="M5 10v9h14v-9"/>
+        <path d="M10 19v-5h4v5"/>
+      </svg>
+    </div>
+    <div class="stats">65+ PROMPTS&nbsp;&nbsp;·&nbsp;&nbsp;15 PAGES&nbsp;&nbsp;·&nbsp;&nbsp;PDF</div>
+    <div class="price">$27</div>
+  </div>
+</div>
+</body>
+</html>
