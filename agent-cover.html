@@ -4,33 +4,55 @@
 <meta charset="utf-8" />
 <title>Agent Field Guide — Cover</title>
 <style>
-  @import url("https://fonts.googleapis.com/css2?family=Inter:wght@500;600;700&family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=JetBrains+Mono:wght@500;600&display=swap");
+  @import url("https://fonts.googleapis.com/css2?family=Inter:wght@500;600;700&family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700;9..144,800&family=JetBrains+Mono:wght@500;600&display=swap");
 
-  html, body { margin: 0; padding: 0; background: #faf8f4; }
+  html, body { margin: 0; padding: 0; background: #0e3d24; }
   body { width: 1280px; height: 1280px; overflow: hidden; position: relative; }
 
   .cover {
     position: relative;
     width: 1280px;
     height: 1280px;
+    overflow: hidden;
     background:
-      radial-gradient(ellipse 70% 55% at 50% 42%, rgba(26,24,20,.08), transparent 80%) center / cover no-repeat,
-      #faf8f4;
+      radial-gradient(ellipse 55% 55% at 50% 0%, rgba(244,196,116,0.16), transparent 70%),
+      radial-gradient(ellipse 50% 60% at 100% 100%, rgba(31,111,74,0.55), transparent 65%),
+      linear-gradient(180deg, #0e3d24 0%, #103f25 50%, #0c3320 100%);
     font-family: 'Inter', system-ui, sans-serif;
-    color: #1a1814;
+    color: #f6efe0;
   }
 
+  /* Subtle dot texture in warm tone */
   .dots {
     position: absolute; inset: 0;
-    background-image: radial-gradient(rgba(26,24,20,.18) 1.4px, transparent 1.4px);
+    background-image: radial-gradient(rgba(246,239,224,.12) 1.4px, transparent 1.4px);
     background-size: 26px 26px;
-    -webkit-mask-image: radial-gradient(ellipse 65% 55% at 50% 45%, black, transparent 88%);
-            mask-image: radial-gradient(ellipse 65% 55% at 50% 45%, black, transparent 88%);
+    -webkit-mask-image: radial-gradient(ellipse 70% 60% at 50% 45%, black, transparent 90%);
+            mask-image: radial-gradient(ellipse 70% 60% at 50% 45%, black, transparent 90%);
+  }
+
+  /* Decorative arc behind hero — sun-like */
+  .arc {
+    position: absolute;
+    top: -260px; left: 50%;
+    transform: translateX(-50%);
+    width: 1600px; height: 1600px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(244,196,116,.10), transparent 55%);
+    pointer-events: none;
+  }
+
+  /* Bottom warm gradient block */
+  .glow-bottom {
+    position: absolute;
+    left: 0; right: 0; bottom: 0; height: 280px;
+    background: linear-gradient(180deg, transparent, rgba(8,42,24,.5));
+    pointer-events: none;
   }
 
   .rule {
     position: absolute; left: 80px; right: 80px;
-    height: 1px; background: rgba(26,24,20,.12);
+    height: 1px; background: rgba(246,239,224,.20);
   }
   .rule-top { top: 120px; }
   .rule-bottom { bottom: 160px; }
@@ -39,13 +61,13 @@
     position: absolute; top: 90px; left: 80px;
     font-family: 'JetBrains Mono', monospace;
     font-size: 20px; letter-spacing: .22em;
-    color: #166534; font-weight: 600;
+    color: #f4c474; font-weight: 600;
   }
   .issue {
     position: absolute; top: 90px; right: 80px;
     font-family: 'JetBrains Mono', monospace;
     font-size: 20px; letter-spacing: .22em;
-    color: rgba(26,24,20,.55); font-weight: 600;
+    color: rgba(246,239,224,.55); font-weight: 600;
   }
 
   .hero {
@@ -55,21 +77,30 @@
   .hero .line1 {
     font-family: 'Fraunces', Georgia, serif;
     font-weight: 600; font-size: 140px; line-height: 1.0;
-    letter-spacing: -0.03em; color: #1a1814;
+    letter-spacing: -0.03em; color: #f6efe0;
     margin: 0;
+  }
+  .hero .line2-wrap {
+    position: relative; display: inline-block;
+    margin: 24px 0 0;
   }
   .hero .line2 {
     font-family: 'Fraunces', Georgia, serif;
     font-weight: 700; font-size: 230px; line-height: 1.0;
-    letter-spacing: -0.045em; color: #1a1814;
-    margin: 24px 0 0; display: inline-block;
-    background-image: linear-gradient(transparent 70%, rgba(22,101,52,.28) 70%);
-    background-size: 100% 100%;
+    letter-spacing: -0.045em; color: #f6efe0;
+    display: inline-block;
+  }
+  .hero .underline-warm {
+    position: absolute; left: 0; right: 0; bottom: 18px; height: 36px;
+    background: linear-gradient(90deg, #f4c474, #e3a23c);
+    opacity: 0.95;
+    z-index: -1;
+    border-radius: 2px;
   }
   .hero .sub {
     font-family: 'Fraunces', Georgia, serif;
     font-weight: 500; font-style: italic;
-    font-size: 50px; line-height: 1.18; color: #3a3833;
+    font-size: 50px; line-height: 1.18; color: #e8dcb8;
     margin: 60px 0 0;
     max-width: 980px;
   }
@@ -80,7 +111,7 @@
     transform: rotate(-90deg); transform-origin: left top;
     font-family: 'JetBrains Mono', monospace;
     font-size: 14px; letter-spacing: .42em;
-    color: rgba(26,24,20,.40); font-weight: 600;
+    color: rgba(246,239,224,.45); font-weight: 600;
     white-space: nowrap;
   }
 
@@ -88,23 +119,28 @@
     position: absolute; left: 80px; right: 80px; bottom: 80px;
     display: flex; align-items: center; justify-content: space-between;
   }
-  .bottom .mark { width: 56px; height: 56px; border-radius: 10px;
-    background: rgba(22,101,52,.10); display: grid; place-items: center; }
+  .bottom .mark {
+    width: 56px; height: 56px; border-radius: 12px;
+    background: rgba(244,196,116,.18);
+    border: 1px solid rgba(244,196,116,.45);
+    display: grid; place-items: center;
+  }
   .bottom .stats {
     font-family: 'JetBrains Mono', monospace;
     font-size: 24px; letter-spacing: .32em;
-    color: #1a1814; font-weight: 600;
+    color: #f6efe0; font-weight: 600;
   }
   .bottom .price {
     font-family: 'Fraunces', Georgia, serif;
-    font-weight: 700; font-size: 56px; color: #166534;
-    line-height: 1;
+    font-weight: 700; font-size: 64px;
+    color: #f4c474; line-height: 1;
   }
 </style>
 </head>
 <body>
 <div class="cover">
   <div class="dots"></div>
+  <div class="arc"></div>
 
   <div class="rule rule-top"></div>
   <div class="eyebrow">MANUAL №&nbsp;001 · A FIELD GUIDE FOR AGENTS</div>
@@ -114,14 +150,18 @@
 
   <div class="hero">
     <div class="line1">The Agent's</div>
-    <div class="line2">Field Guide.</div>
+    <div class="line2-wrap">
+      <div class="underline-warm"></div>
+      <div class="line2">Field Guide.</div>
+    </div>
     <div class="sub">Sixty-five copy-paste AI prompts<br/>for working real estate agents.</div>
   </div>
 
+  <div class="glow-bottom"></div>
   <div class="rule rule-bottom"></div>
   <div class="bottom">
     <div class="mark" aria-hidden="true">
-      <svg viewBox="0 0 24 24" width="30" height="30" fill="none" stroke="#166534" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <svg viewBox="0 0 24 24" width="30" height="30" fill="none" stroke="#f4c474" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
         <path d="M3 11.5 12 4l9 7.5"/>
         <path d="M5 10v9h14v-9"/>
         <path d="M10 19v-5h4v5"/>
